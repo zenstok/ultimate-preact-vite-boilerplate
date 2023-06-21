@@ -4,5 +4,20 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [preact(), VitePWA({ registerType: "autoUpdate" })],
+  plugins: [
+    preact({
+      babel: {
+        plugins: [
+          [
+            "babel-plugin-styled-components",
+            {
+              displayName: true,
+              fileName: true,
+            },
+          ],
+        ],
+      },
+    }),
+    VitePWA({ registerType: "autoUpdate" }),
+  ],
 });
