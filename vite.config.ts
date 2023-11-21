@@ -1,11 +1,10 @@
 import { defineConfig } from "vite";
-import preact from "@preact/preset-vite";
-import { VitePWA } from "vite-plugin-pwa";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    preact({
+    react({
       babel: {
         plugins: [
           [
@@ -18,6 +17,5 @@ export default defineConfig({
         ],
       },
     }),
-    VitePWA({ registerType: "autoUpdate" }),
   ],
 });
