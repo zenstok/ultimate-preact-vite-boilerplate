@@ -34,6 +34,7 @@ module.exports = {
         'no-param-reassign': 'warn',
         'react/jsx-props-no-spreading': 'off',
         'react/require-default-props': 'off',
+        'react/jsx-no-bind': 'off',
         'max-len': [
             'warn',
             {

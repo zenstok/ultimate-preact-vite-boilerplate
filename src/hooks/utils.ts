@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 export const useSkipFirstRun = (
   callback: SimpleCallbackFunction,
-  dependencies: unknown[]
+  dependencies: unknown[],
 ) => {
   const isFirstRun = useRef(true);
   useEffect(() => {
